@@ -25,18 +25,18 @@ var endlose;
 var endwin;
 function setup() {
   createCanvas(800,400);
-  azozship = loadImage("../imgs/azz.png");
-  azzrocket = loadImage("../imgs/rocket.png");
-  rkt = loadImage("../imgs/azzrocket.png");
-  orng = loadImage("../imgs/orangina.png");
-  bty = loadImage("../imgs/btl.png");
-  mrk = loadImage("../imgs/mrko.gif");
-  backimg = loadImage("../imgs/back.jpg");
-  finalpic = loadImage("../imgs/3es.png");
-  explose = loadImage("../imgs/explose.png");
-  maintitle = loadImage("../imgs/maintitle.jpg")
-  endlose = loadImage("../imgs/l9r3awins.jpg");
-  endwin = loadImage("../imgs/win.jpg");
+  azozship = loadImage("./azz.png");
+  azzrocket = loadImage("./rocket.png");
+  rkt = loadImage("./azzrocket.png");
+  orng = loadImage("./orangina.png");
+  bty = loadImage("./btl.png");
+  mrk = loadImage("./mrko.gif");
+  backimg = loadImage("./back.jpg");
+  finalpic = loadImage("./3es.png");
+  explose = loadImage("./explose.png");
+  maintitle = loadImage("./maintitle.jpg")
+  endlose = loadImage("./l9r3awins.jpg");
+  endwin = loadImage("./win.jpg");
 }
 
 function draw() {
@@ -247,15 +247,15 @@ setInterval(newstar,starspeed);
 function swappl(){
   if(player.x < 0){
     if(currentpl == 1){
-    azozship = loadImage("../imgs/mnanauk.png");
-    azzrocket = loadImage("../imgs/dla3.png");
+    azozship = loadImage("./mnanauk.png");
+    azzrocket = loadImage("./dla3.png");
     player.x = 30;
     mylife = 20;
     currentpl = 2;
   }
   else if (currentpl == 2){
-    azozship = loadImage("../imgs/tijani.png");
-    azzrocket = loadImage("../imgs/lcask.png");
+    azozship = loadImage("./tijani.png");
+    azzrocket = loadImage("./lcask.png");
     player.x = 30;
     mylife = 20;
     currentpl = 3;
