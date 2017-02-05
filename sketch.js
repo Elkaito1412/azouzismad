@@ -73,7 +73,7 @@ function draw() {
       player.x -= 1;
     }
   }
-  if (mylife <= 0 && currentpl == 3){
+  if (mylife <= 0 && currentpl == 4){
     finalscreen();
   }
 }
@@ -259,6 +259,13 @@ function swappl(){
     player.x = 30;
     mylife = 20;
     currentpl = 3;
+  }
+    else if(currentpl == 3){
+    azozship = loadImage("./yaa.png");
+    azzrocket = loadImage("./pring.png");
+    player.x = 30;
+    mylife = 20;
+    currentpl = 4;
   }
   }
 }
