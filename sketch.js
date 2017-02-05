@@ -6,7 +6,7 @@ var difsped = 300;
 var starspeed = 200;
 var starmovsped = 1;
 var mylife = 20;
-var ennlife = 30;
+var ennlife = 50;
 var scr = 0;
 var currentpl = 1;
 var currenten = 1;
@@ -22,19 +22,21 @@ var one = 0;
 var explose;
 var maintitle;
 var endlose;
+var endwin;
 function setup() {
   createCanvas(800,400);
-  azozship = loadImage("./azz.png");
-  azzrocket = loadImage("./rocket.png");
-  rkt = loadImage("./azzrocket.png");
-  orng = loadImage("./orangina.png");
-  bty = loadImage("./btl.png");
-  mrk = loadImage("./mrko.gif");
-  backimg = loadImage("./back.jpg");
-  finalpic = loadImage("./3es.png");
-  explose = loadImage("./explose.png");
-  maintitle = loadImage("./maintitle.jpg")
-  endlose = loadImage("./l9r3awins.jpg");
+  azozship = loadImage("../imgs/azz.png");
+  azzrocket = loadImage("../imgs/rocket.png");
+  rkt = loadImage("../imgs/azzrocket.png");
+  orng = loadImage("../imgs/orangina.png");
+  bty = loadImage("../imgs/btl.png");
+  mrk = loadImage("../imgs/mrko.gif");
+  backimg = loadImage("../imgs/back.jpg");
+  finalpic = loadImage("../imgs/3es.png");
+  explose = loadImage("../imgs/explose.png");
+  maintitle = loadImage("../imgs/maintitle.jpg")
+  endlose = loadImage("../imgs/l9r3awins.jpg");
+  endwin = loadImage("../imgs/win.jpg");
 }
 
 function draw() {
@@ -61,7 +63,7 @@ function draw() {
   fill(0,255,0);
   rect(0,0,map(mylife,0,20,0,width/2),10);
   fill(255,0,0);
-  rect(width,0,map(ennlife,0,30,0,-width/2),10);
+  rect(width,0,map(ennlife,0,50,0,-width/2),10);
   if(mylife <= 0 || ennlife <= 0){
     if(ennlife <= 0){
       ennemy.x += 1;
@@ -245,15 +247,15 @@ setInterval(newstar,starspeed);
 function swappl(){
   if(player.x < 0){
     if(currentpl == 1){
-    azozship = loadImage("./azz.png");
-    azzrocket = loadImage("./dla3.png");
+    azozship = loadImage("../imgs/mnanauk.png");
+    azzrocket = loadImage("../imgs/dla3.png");
     player.x = 30;
     mylife = 20;
     currentpl = 2;
   }
   else if (currentpl == 2){
-    azozship = loadImage("./azz.png");
-    azzrocket = loadImage("./lcask.png");
+    azozship = loadImage("../imgs/tijani.png");
+    azzrocket = loadImage("../imgs/lcask.png");
     player.x = 30;
     mylife = 20;
     currentpl = 3;
@@ -264,6 +266,7 @@ function swappl(){
 function finalscreen(){
   if(ennlife <= 0){
   background(0);
+  image(endwin,0,0);
 }
   else if(mylife < 0){
     background(0);
